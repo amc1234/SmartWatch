@@ -1,15 +1,10 @@
 An original design for a SmartWatch.
 
-The SmartWatch will have an OLED display and use an Adafruit Microprocessor, an Adafruit Bluetooth module, a small motor, two buttons,
-and a Lithium Ion battery.
+The SmartWatch uses and OLED display and uses an Arduino Uno, an HC-05 Bluetooth module, a motor, and a 9V battery.
 
-It is meant to do two simple tasks: tell time and date, and notify you when there is a new notification.
-The small motor will vibrate when there is a new notifications and the button will display that notification when clicked.
+It is meant to do two simple tasks: tell time and date, and notify you are receive a text or call.
+The small motor vibrates when there is a new text or call.
 
-Another button will be an on/off switch.
+The SmartWatch has been programmed on the Arduino IDE that is compatible with both the microprocessor and Bluetooth module.
 
-A case will be designed on TinkerCad and 3D printed so the watch can be worn.
-
-The SmartWatch will be programmed on the Arduino IDE that is compatible with both the microprocessor and Bluetooth module.
-
-Currently working on code.
+An application for android has also been developed to send data to the Arduino Uno.
