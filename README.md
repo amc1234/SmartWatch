@@ -9,3 +9,5 @@ The SmartWatch has been programmed on the Arduino IDE and is compatible with bot
 An application for Android has also been developed to send data to the Arduino Uno.
 
 Compatible with Android devices.
+
+Idea and some programming help from: TinkerNut
