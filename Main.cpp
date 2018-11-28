@@ -231,7 +231,7 @@ void loop() {
       display.print(myDate);
       display.display();
       
-      digitalWrite(motor, HIGH); // vibrate motor for 1000 for calls
+      digitalWrite(motor, HIGH); // vibrate motor for 1s for calls
       delay(1000);
       digitalWrite(motor, LOW);
       delay(1000); 
@@ -263,7 +263,7 @@ void loop() {
       display.print(myDate);
       display.display();
       
-      digitalWrite(motor, HIGH); //vibrate motor for 250 for texts
+      digitalWrite(motor, HIGH); //vibrate motor for 0.25s for texts
       delay(250);
       digitalWrite(motor, LOW);
       delay(250);
