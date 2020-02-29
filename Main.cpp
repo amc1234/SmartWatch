@@ -15,8 +15,6 @@
 #define OLED_RESET 12
 Adafruit_SSD1306 display(OLED_RESET); //initializing display
 
-const int motor = 3; //pwm pin for vibrating motor
-
 static const unsigned char PROGMEM calls[] = { //bitmap for calls icon
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -155,8 +153,6 @@ void setup()
 {                
   Serial.begin(9600);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  //declare display height and width (128x64)
-
-  pinMode(motor, OUTPUT); //declare outputs and inputs
  
   display.display(); //show splashscreen
   delay(2000);
@@ -210,7 +206,6 @@ void loop() {
       display.clearDisplay();
       display.setCursor(0,7);
       display.clearDisplay();
-      digitalWrite(motor, LOW);
    }
    else{
       display.drawBitmap(0, 0, calls, 128, 64, 1); //display call icon as well as phone number
@@ -230,11 +225,6 @@ void loop() {
       display.setTextColor(1);
       display.print(myDate);
       display.display();
-      
-      digitalWrite(motor, HIGH); // vibrate motor for 1s for calls
-      delay(1000);
-      digitalWrite(motor, LOW);
-      delay(1000); 
    }
    
    if(myText.indexOf('text') >= 0){ //read the string and display its value and vibrate motor if true
@@ -242,7 +232,6 @@ void loop() {
       display.clearDisplay();
       display.setCursor(0,7);
       display.clearDisplay();
-      digitalWrite(motor, LOW);
    }
    else{
       display.drawBitmap(0, 0, text, 128, 64, 1); //display text icon as well as phone number
@@ -262,11 +251,6 @@ void loop() {
       display.setTextColor(1);
       display.print(myDate);
       display.display();
-      
-      digitalWrite(motor, HIGH); //vibrate motor for 0.25s for texts
-      delay(250);
-      digitalWrite(motor, LOW);
-      delay(250);
    }
   }
 }
