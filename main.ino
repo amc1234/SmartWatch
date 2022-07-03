@@ -3,10 +3,9 @@
     Author: Andrea M
     Date: October 21, 2018
 
-    Compatible with Android and an app called Android Smartwatch
+    Compatible with Android and an app called Smartwatch
 *************************************************************/
 
-#include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
