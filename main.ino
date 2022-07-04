@@ -200,7 +200,7 @@ void loop() {
    }
 
     //call handler
-    if(myPhone.indexOf('phone') >= 0){ //read the string and display its value and vibrate motor if true
+    if(myPhone.indexOf('phone') >= 0){ //read the string and display its value
       display.setCursor(0,6);
       display.clearDisplay();
       display.setCursor(0,7);
@@ -226,7 +226,7 @@ void loop() {
       display.display();
    }
    
-   if(myText.indexOf('text') >= 0){ //read the string and display its value and vibrate motor if true
+   if(myText.indexOf('text') >= 0){ //read the string and display its value
       display.setCursor(0,6);
       display.clearDisplay();
       display.setCursor(0,7);
